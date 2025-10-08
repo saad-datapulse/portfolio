@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main style={{ maxWidth: 700, margin: "2rem auto", fontFamily: "sans-serif" }}>
@@ -12,7 +14,7 @@ export default function Home() {
           marginBottom: "2rem",
         }}
       >
-        <span style={{ fontWeight: "bold", fontSize: "1.2rem" }}>Saad's Portfolio</span>
+        <span style={{ fontWeight: "bold", fontSize: "1.2rem" }}>Saad&apos;s Portfolio</span>
         <ul style={{ display: "flex", gap: "1.5rem", listStyle: "none", margin: 0, padding: 0 }}>
           <li><a href="#" style={{ textDecoration: "none", color: "#333" }}>Home</a></li>
           <li><a href="#" style={{ textDecoration: "none", color: "#333" }}>Projects</a></li>
@@ -20,18 +22,20 @@ export default function Home() {
         </ul>
       </nav>
       <header style={{ textAlign: "center", marginBottom: "2rem" }}>
-        <img
+        <Image
           src="/window.svg"
           alt="Profile"
-          style={{ width: 100, borderRadius: "50%" }}
+          width={100}
+          height={100}
+          style={{ borderRadius: "50%" }}
         />
-        <h1>Saad</h1>
-        <p style={{ color: "#555" }}>Frontend Developer & Designer</p>
+        <h1>Saad Ahmed</h1>
+        <p style={{ color: "#555" }}>Frontend Developer &amp; Designer</p>
       </header>
       <section>
         <h2>About Me</h2>
         <p>
-          Hi! I'm Saad, a passionate frontend developer with a love for crafting beautiful and accessible web experiences. I enjoy working with React, Next.js, and modern CSS.
+          Hi! I&apos;m Saad, a passionate frontend developer with a love for crafting beautiful and accessible web experiences. I enjoy working with React, Next.js, and modern CSS.
         </p>
       </section>
       <section>
@@ -68,7 +72,7 @@ export default function Home() {
           fontSize: "0.95rem",
         }}
       >
-        &copy; {new Date().getFullYear()} Saad. All rights reserved.
+        &copy; {new Date().getFullYear()} Saad Ahmed. All rights reserved.
       </footer>
     </main>
   );
