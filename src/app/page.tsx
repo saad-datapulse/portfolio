@@ -1,79 +1,66 @@
 import Image from "next/image";
+import NavBar from "@/components/layout/navbar";
+import DarkVeil from "@/components/layout/darkveil";
+import GradientText from "@/components/GradientText";
+import ShinyText from "@/components/ShinyText";
+import GlassButton from "@/components/GlassButton";
 
 export default function Home() {
   return (
-    <main style={{ maxWidth: 700, margin: "2rem auto", fontFamily: "sans-serif" }}>
-      {/* Sample Navbar */}
-      <nav
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "1rem 0",
-          borderBottom: "1px solid #eee",
-          marginBottom: "2rem",
-        }}
-      >
-        <span style={{ fontWeight: "bold", fontSize: "1.2rem" }}>Saad&apos;s Portfolio</span>
-        <ul style={{ display: "flex", gap: "1.5rem", listStyle: "none", margin: 0, padding: 0 }}>
-          <li><a href="#" style={{ textDecoration: "none", color: "#333" }}>Home</a></li>
-          <li><a href="#" style={{ textDecoration: "none", color: "#333" }}>Projects</a></li>
-          <li><a href="#" style={{ textDecoration: "none", color: "#333" }}>Contact</a></li>
-        </ul>
-      </nav>
-      <header style={{ textAlign: "center", marginBottom: "2rem" }}>
-        <Image
-          src="/window.svg"
-          alt="Profile"
-          width={100}
-          height={100}
-          style={{ borderRadius: "50%" }}
-        />
-        <h1>Saad Ahmed</h1>
-        <p style={{ color: "#555" }}>Frontend Developer &amp; Designer</p>
-      </header>
-      <section>
-        <h2>About Me</h2>
-        <p>
-          Hi! I&apos;m Saad, a passionate frontend developer with a love for crafting beautiful and accessible web experiences. I enjoy working with React, Next.js, and modern CSS.
-        </p>
-      </section>
-      <section>
-        <h2>Projects</h2>
-        <ul>
-          <li>
-            <strong>Portfolio Website</strong> – A personal site built with Next.js and Tailwind CSS.
-          </li>
-          <li>
-            <strong>Weather App</strong> – Real-time weather dashboard using OpenWeatherMap API.
-          </li>
-          <li>
-            <strong>Task Manager</strong> – Productivity app for managing daily tasks.
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Contact</h2>
-        <p>
-          Email: <a href="mailto:saad@example.com">saad@example.com</a>
-        </p>
-        <p>
-          GitHub: <a href="https://github.com/saad">github.com/saad</a>
-        </p>
-      </section>
-      {/* Sample Footer */}
-      <footer
-        style={{
-          marginTop: "3rem",
-          padding: "1rem 0",
-          borderTop: "1px solid #eee",
-          textAlign: "center",
-          color: "#888",
-          fontSize: "0.95rem",
-        }}
-      >
-        &copy; {new Date().getFullYear()} Saad Ahmed. All rights reserved.
-      </footer>
-    </main>
+    <>
+      <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+
+        <DarkVeil speed={1} />
+
+        <NavBar />
+
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          textAlign: 'center',
+          color: '#fff',
+          zIndex: 10
+        }}>
+          <h1 style={{
+            fontSize: '5rem',
+            fontWeight: 'bold',
+            marginBottom: '0',
+            textShadow: '0 2px 10px rgba(0,0,0,0.2)'
+          }}>
+             <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+
+              animationSpeed={1}
+
+              showBorder={false}
+
+              className="custom-class">Full Stack Developer </GradientText>
+              <br/>
+          </h1>
+          <p style={{
+            fontSize: '3rem',
+            opacity: 0.9,
+            marginTop: '-6rem',
+            marginBottom: '1rem'
+          }}>
+            & Content Creator
+          </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum minus perferendis et expedita saepe sapiente eligendi. Quis ipsum rem similique reprehenderit soluta et consectetur autem doloribus nihil nemo animi dolorum doloremque repellendus possimus, porro obcaecati vel iure, ad ex aperiam?</p>
+          <div style={{
+            display: 'flex',
+            gap: '1rem',
+            justifyContent: 'center',
+            marginTop: '2rem'
+          }}>
+            <GlassButton variant="filled">Contact Now</GlassButton>
+            <GlassButton variant="outlined">More Info</GlassButton>
+          </div>
+        </div>
+
+
+      </div>
+    </>
   );
 }
